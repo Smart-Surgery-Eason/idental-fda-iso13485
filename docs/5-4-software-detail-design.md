@@ -198,4 +198,4 @@ Corresponding detailed verification shall be documented in the Software unit ver
 
 The document shall update as required in the software development and maintenance plan.
 
-[asset-00001]: assets/00001.png
+[asset-00001]: ../assets/5-4-figure-01.png
