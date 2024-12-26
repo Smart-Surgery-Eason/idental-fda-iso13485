@@ -1,0 +1,54 @@
+System requirement ID,Description,Software requirement ID,Description,Software Item ID,Description,Software Unit ID,Description,Unit test ID,Item Test ID,System test ID, Safety Class,Hazard ID
+MR01,Annotation,SR01, The software shall manage the frontend UI for Imaging features,SI01-01,display dental with periodontal stage,SU0101-01,Render the length of periodontal estimation.,SUT0101-01,SIT01-01,SRT01,A,HZ 1.1.1
+,,,,,,SU0101-02,Auto-annotation(Render periodontal stage visualization),SUT0101-02,,,,
+,,,,,,SU0101-03,"view, zoom, and navigate through imaging layers",SUT0101-03,,,,
+,,,,,,SU0101-04,Handle image loading and layout for UI,SUT0101-04,,,,
+,,,,SI02-01,perform periodontal analysis,SU0201-01,"compute periodontal analysis",SUT0201-01,SIT02-01,SRT02,B,HZ 2.1.1
+,,,,,,SU0201-02, Send results back the UI layer,SUT0201-02,,,,
+MR03,Management,SR03,The software shall manage the frontend for foundational features,SI03-01,account management UI,SU0301-01,"Display an interactive account management interface, allowing users to create, edit, and delete accounts.",SUT0301-01,SIT03-01,SRT03,B,HZ 3.1.1
+,,,,,,SU0301-02,User input validation,SUT0301-02,,,,
+,,,,,,SU0301-03,Account session management,SUT0301-03,,,,
+,,,,SI03-02,feature management UI,SU0302-01,"Render a feature management interface where users can enable, disable based on their permissions.",SUT0302-01,SIT03-02,,B,HZ 3.2.1
+,,,,SI03-03,audit logging UI,SU0303-01,An UI allows users to view,SUT0303-01,SIT03-03,,A,HZ 3.3.1
+,,,,,,SU0303-02,An UI allows users to filter,SUT0303-02,,,,
+,,,,,,SU0303-03,User could export log entries for system actions and access history.,SUT0303-03,,,,
+,,,,SI03-04,file management UI,SU0304-01,An archive button,SUT0304-01,SIT03-04,,B,HZ 3.4.1
+,,,,,,SU0304-02, Display and manage file list,SUT0304-02,,,,
+,,,,,,SU0304-03,Handle file upload/download,SUT0304-03,,,,
+,,,,SI03-05,setting management UI,SU0305-01,Render a settings management interface that allows configuration of application preferences,SUT0305-01,SIT03-05,,B,HZ 3.5.1
+,,,,,,SU0305-02,Display settings options,SUT0305-02,,,,
+,,,,,,SU0305-03,auto-save settings changes,SUT0305-03,,,,
+,,,,SI03-06,language management UI,SU0306-01,present english locale UI,SUT0306-01,SIT03-06,,B,HZ 3.6.1
+,,,,,,SU0306-02,present traditional chineese locale UI,SUT0303-02,,,A,HZ 3.3.2
+,,,,,,SU0306-03,Switch between language locales,SUT0303-03,,,,
+,,,,SI04-01,account management backend,SU0401-01,"backend services for managing user accounts, including user creation, deletion, permissions setting, and profile updates.",SUT0401-01,SIT04-01,SRT04,B,HZ 4.1.1
+,,,,,,SU0401-02,Process user registration and login,SUT0401-02,,,,
+,,,,,,SU0401-03,Handle account deletion and updates,SUT0401-03,,,,
+,,,,SI04-02,feature management backend,SU0402-01,"backend to enable, disable, and configure features as per user roles and system settings.",SUT0402-01,SIT04-02,,B,HZ 4.2.1
+,,,,,,SU0402-02,Manage feature state persistence,SUT0402-02,,,,
+,,,,,,SU0402-03,Synchronize features across sessions,SUT0402-03,,,,
+,,,,SI04-03,audit logging backend,SU0403-01,"Create an audit logging backend to record and retrieve user actions and access logs, supporting data export and filtering capabilities",SUT0403-01,SIT04-03,,A,HZ 4.3.1
+,,,,,,SU0403-02,Append log entries from services,SUT0403-02,,,,
+,,,,SI04-04,file management backend,SU0404-01,"backend that allows secure uploading, downloading, categorization, and deletion of application files.",SUT0404-01,SIT04-04,,B,HZ 4.4.1
+,,,,,,SU0404-02,Maintain file metadata,SUT0404-02,,,,
+,,,,,,SU0404-03,Manage file permissions,SUT0404-03,,,,
+,,,,SI04-05,setting management backend,SU0405-01,backend to store and retrieve application preferences,SUT0405-01,SIT04-05,,B,HZ 4.5.1
+,,,,,,SU0405-02, Load settings defaults,SUT0405-02,,,,
+,,,,,,SU0405-03,Save and update user preferences,SUT0405-03,,,,
+,,,,SI04-06,language management backend,SU0406-01,compute english locale API,SUT0406-01,SIT04-06,,B,HZ 4.6.1
+,,,,,,SU0406-02,compute traditional chineese locale API,SUT0406-02,,,,
+,,,,,,SU0406-03,Fetch and apply localization data,SUT0406-03,,,,
+MR05,Messaging Queue,SR05, The software shall manage all events and messagings for data integration,SI05-01,pub/sub and event management,SU0501-01,Manage event subscriptions,SUT0501-01,SIT05-01,SRT05,B,HZ 5.1.1
+,,,,,,SU0501-02, Dispatch and log event messages,SUT0501-02,,,,
+,,,,,,SU0501-03,Retry failed message deliveries,SUT0501-03,,,,
+MR6,Data Pre Processing,SR06,The software shall manage pre-processing for data pipeline,SI06-01,pre-processing data pipeline,SU0601-01,filtering,SUT0601-01,SIT06-01,SRT06,B,HZ 6.1.1
+,,,,,,SU0601-02,normalization,SUT0601-02,,,,
+MR7,Machine Learning Inference,SR07,The software shall manage inference for ML model,SI07-01,ML model inference,SU0701-01,dental segmentation tasks,SUT0701-01,SIT07-01,SRT07,A,HZ 7.1.1
+MR8,Data Post Processing ,SR08,The software shall manage post-processing for data pipeline,SI08-01,post-processing data pipeline,SU0801-01,contour extraction,SUT0801-01,SIT08-01,SRT08,A,HZ 8.1.1
+,,,,,,SU0801-02,Anatomy structure locating,SUT0801-02,,,,
+,,,,,,SU0801-03,Anatomy structure enhancement,SUT0801-03,,,,
+MR9,Data Lake,SR09, The software shall manage catalog for datasets,SI09-01,storage for unstructure data,SU0901-01,"store data with metadata, and versioning for iDental datasets",SUT0901-01,SIT09-01,SRT09,B,HZ 9.1.1
+MR10,Database,SR10,The software shall manage the database for all iDental Services,SI10-01,storage for structure data,SU1001-02,Indexing,SUT1001-02,SIT10-01,SRT10,B,HZ 10.1.1
+,,,,,,SU1001-03,Backup and restore functionality,SUT1001-03,,,,
+MR11,User manual/ Quick start guide,-,-,-,-,-,-,-,-,-,-,-
+MR12,Label,SR12,The software shall manage the machine learning labelling for machine learning,,,,,,,,,
