@@ -33,7 +33,7 @@
     - [6.18 SOFTWARE ITEM SI08-01](#618-software-item-si08-01)
     - [6.19 SOFTWARE ITEM SI09-01](#619-software-item-si09-01)
     - [6.20 SOFTWARE ITEM SI10-01](#620-software-item-si10-01)
-  - [7. UPDATE AND VERIFICATION OF SOFTWARE DETAIL DESIGN](#7-update-and-verification-of-software-detail-design)
+  - [7. UPDATE AND VERIFICATION OF SOFTWARE DETAIL DESIGNBefore this document is released, all software unit shall be reviewed to ensure the following:](#7-update-and-verification-of-software-detail-designbefore-this-document-is-released-all-software-unit-shall-be-reviewed-to-ensure-the-following)
 
 ## 1. PURPOSE
 
@@ -58,177 +58,177 @@ Please reference 5.1 Software Development and Maintenance Plan > [8.3.2. SOFTWAR
 
 ## 6. DETAIL DESIGN
 ### 6.1 SOFTWARE ITEM SI01-01
-This Software item handles display of dental with periodontal stage visualization and manages the frontend UI imaging features.
+This Software item provides comprehensive dental visualization capabilities with periodontal stage analysis features. The system renders high-resolution dental images with interactive periodontal measurements and supports multi-layer visualization for detailed examination.
 
-| SOFTWARE Unit | Description                                             | Hazard Class |
-| ------------- | :------------------------------------------------------ | :----------- |
-| SU0101-01     | Render the length of periodontal estimation             | class A      |
-| SU0101-02     | Auto-annotation(Render periodontal stage visualization) | class A      |
-| SU0101-03     | View, zoom, and navigate through imaging layers         | class A      |
-| SU0101-04     | Handle image loading and layout for UI                  | class A      |
+| SOFTWARE Unit | Description                                                                                     | Hazard Class |
+| ------------- | :---------------------------------------------------------------------------------------------- | :----------- |
+| SU0101-01     | Renders periodontal measurements with 0.1mm precision                                           | class A      |
+| SU0101-02     | Performs automated periodontal stage visualization with colored indicators                      | class A      |
+| SU0101-03     | Provides seamless image navigation with support for 500% zoom capability, panning, and rotating | class A      |
+| SU0101-04     | Manages concurrent loading of multiple imaging layers with responsive UI updates                | class A      |
 
 ### 6.2 SOFTWARE ITEM SI02-01
-This Software item performs periodontal analysis computations and processing.
+This Software item executes comprehensive periodontal analysis with high-precision measurements and real-time processing capabilities.
 
-| SOFTWARE Unit | Description                    | Hazard Class |
-| ------------- | :----------------------------- | :----------- |
-| SU0201-01     | Compute periodontal analysis   | class B      |
-| SU0201-02     | Send results back the UI layer | class B      |
+| SOFTWARE Unit | Description                                                    | Hazard Class |
+| ------------- | :------------------------------------------------------------- | :----------- |
+| SU0201-01     | Processes periodontal measurements with 70% accuracy threshold | class B      |
+| SU0201-02     | Transmits analysis results with guaranteed data integrity      | class B      |
 
 ### 6.3 SOFTWARE ITEM SI03-01
-This Software item manages account management UI functionality including user interfaces for account creation, editing and deletion.
+This Software item delivers secure account management functionality with comprehensive user control features and robust session handling.
 
-| SOFTWARE Unit | Description                                         | Hazard Class |
-| ------------- | :-------------------------------------------------- | :----------- |
-| SU0301-01     | Display an interactive account management interface | class B      |
-| SU0301-02     | User input validation                               | class B      |
-| SU0301-03     | Account session management                          | class B      |
+| SOFTWARE Unit | Description                                                            | Hazard Class |
+| ------------- | :--------------------------------------------------------------------- | :----------- |
+| SU0301-01     | Provides intuitive account management interface with real-time updates | class B      |
+| SU0301-02     | Implements comprehensive input validation with immediate feedback      | class B      |
+| SU0301-03     | Maintains secure session management with automatic timeout protection  | class B      |
 
 ### 6.4 SOFTWARE ITEM SI03-02
-This Software item handles feature management UI allowing users to enable/disable features based on permissions.
+This Software item provides granular feature access control with role-based permission management.
 
-| SOFTWARE Unit | Description                           | Hazard Class |
-| ------------- | :------------------------------------ | :----------- |
-| SU0302-01     | Render a feature management interface | class B      |
+| SOFTWARE Unit | Description                                                        | Hazard Class |
+| ------------- | :----------------------------------------------------------------- | :----------- |
+| SU0302-01     | Delivers dynamic feature management interface with instant updates | class B      |
 
 ### 6.5 SOFTWARE ITEM SI03-03
-This Software item manages audit logging UI functionality for viewing and filtering system logs.
+This Software item provides comprehensive audit logging capabilities with advanced filtering and export functionality.
 
-| SOFTWARE Unit | Description                   | Hazard Class |
-| ------------- | :---------------------------- | :----------- |
-| SU0303-01     | An UI allows users to view    | class A      |
-| SU0303-02     | An UI allows users to filter  | class A      |
-| SU0303-03     | User could export log entries | class A      |
+| SOFTWARE Unit | Description                                                    | Hazard Class |
+| ------------- | :------------------------------------------------------------- | :----------- |
+| SU0303-01     | Displays detailed audit logs with chronological organization   | class A      |
+| SU0303-02     | Implements advanced filtering with multiple parameter support  | class A      |
+| SU0303-03     | Provides complete log export functionality in multiple formats | class A      |
 
 ### 6.6 SOFTWARE ITEM SI03-04
-This Software item handles file management UI including archive, file listing and file transfer operations.
+This Software item manages secure file operations with comprehensive archival and transfer capabilities.
 
-| SOFTWARE Unit | Description                  | Hazard Class |
-| ------------- | :--------------------------- | :----------- |
-| SU0304-01     | An archive button            | class B      |
-| SU0304-02     | Display and manage file list | class B      |
-| SU0304-03     | Handle file upload/download  | class B      |
+| SOFTWARE Unit | Description                                                 | Hazard Class |
+| ------------- | :---------------------------------------------------------- | :----------- |
+| SU0304-01     | Executes reliable file archival with integrity verification | class B      |
+| SU0304-02     | Maintains organized file listing with metadata display      | class B      |
+| SU0304-03     | Handles secure file transfers with progress tracking        | class B      |
 
 ### 6.7 SOFTWARE ITEM SI03-05
-This Software item manages settings management UI for application preferences and configurations.
-
-| SOFTWARE Unit | Description                            | Hazard Class |
-| ------------- | :------------------------------------- | :----------- |
-| SU0305-01     | Render a settings management interface | class B      |
-| SU0305-02     | Display settings options               | class B      |
-| SU0305-03     | Auto-save settings changes             | class B      |
-
-### 6.8 SOFTWARE ITEM SI03-06
-This Software item handles language management UI including English and Traditional Chinese localization.
-
-| SOFTWARE Unit | Description                           | Hazard Class |
-| ------------- | :------------------------------------ | :----------- |
-| SU0306-01     | Present english locale UI             | class B      |
-| SU0306-02     | Present traditional chinese locale UI | class A      |
-| SU0306-03     | Switch between language locales       | class B      |
-
-### 6.9 SOFTWARE ITEM SI04-01
-This Software item manages account management backend services including user authentication and profile management.
-
-| SOFTWARE Unit | Description                                 | Hazard Class |
-| ------------- | :------------------------------------------ | :----------- |
-| SU0401-01     | Backend services for managing user accounts | class B      |
-| SU0401-02     | Process user registration and login         | class B      |
-| SU0401-03     | Handle account deletion and updates         | class B      |
-
-### 6.10 SOFTWARE ITEM SI04-02
-This Software item handles feature management backend services for enabling/disabling features and managing permissions.
-
-| SOFTWARE Unit | Description                          | Hazard Class |
-| ------------- | :----------------------------------- | :----------- |
-| SU0402-01     | Backend to enable, disable features  | class B      |
-| SU0402-02     | Manage feature state persistence     | class B      |
-| SU0402-03     | Synchronize features across sessions | class B      |
-
-### 6.11 SOFTWARE ITEM SI04-03
-This Software item manages audit logging backend functionality for recording and retrieving system logs.
+This Software item provides comprehensive settings management with automatic configuration persistence.
 
 | SOFTWARE Unit | Description                                                         | Hazard Class |
 | ------------- | :------------------------------------------------------------------ | :----------- |
-| SU0403-01     | Create an audit logging backend to record and retrieve user actions | class A      |
-| SU0403-02     | Append log entries from services                                    | class A      |
+| SU0305-01     | Delivers intuitive settings interface with categorized organization | class B      |
+| SU0305-02     | Presents comprehensive settings options with detailed descriptions  | class B      |
+| SU0305-03     | Implements automatic settings persistence with backup capability    | class B      |
+
+### 6.8 SOFTWARE ITEM SI03-06
+This Software item provides complete language localization support with seamless switching capabilities.
+
+| SOFTWARE Unit | Description                                                    | Hazard Class |
+| ------------- | :------------------------------------------------------------- | :----------- |
+| SU0306-01     | Implements complete English language interface                 | class B      |
+| SU0306-02     | Implements complete Traditional Chinese language interface     | class A      |
+| SU0306-03     | Provides instantaneous language switching with state retention | class B      |
+
+### 6.9 SOFTWARE ITEM SI04-01
+This Software item delivers secure backend account management services with comprehensive user data protection.
+
+| SOFTWARE Unit | Description                                                      | Hazard Class |
+| ------------- | :--------------------------------------------------------------- | :----------- |
+| SU0401-01     | Implements secure account management with encryption protection  | class B      |
+| SU0401-02     | Processes authentication requests with multi-factor verification | class B      |
+| SU0401-03     | Executes account modifications with full audit trail maintenance | class B      |
+
+### 6.10 SOFTWARE ITEM SI04-02
+This Software item manages feature accessibility with synchronized state management across sessions.
+
+| SOFTWARE Unit | Description                                                      | Hazard Class |
+| ------------- | :--------------------------------------------------------------- | :----------- |
+| SU0402-01     | Controls feature accessibility with role-based validation        | class B      |
+| SU0402-02     | Maintains persistent feature states with redundant storage       | class B      |
+| SU0402-03     | Ensures consistent feature availability across multiple sessions | class B      |
+
+### 6.11 SOFTWARE ITEM SI04-03
+This Software item provides comprehensive audit logging services with secure storage and retrieval capabilities.
+
+| SOFTWARE Unit | Description                                                | Hazard Class |
+| ------------- | :--------------------------------------------------------- | :----------- |
+| SU0403-01     | Maintains complete audit trail with tamper-evident logging | class A      |
+| SU0403-02     | Records system events with guaranteed sequential integrity | class A      |
 
 ### 6.12 SOFTWARE ITEM SI04-04
-This Software item handles file management backend services for secure file operations.
+This Software item manages secure file operations with comprehensive access control.
 
-| SOFTWARE Unit | Description                                | Hazard Class |
-| ------------- | :----------------------------------------- | :----------- |
-| SU0404-01     | Backend that allows secure file operations | class B      |
-| SU0404-02     | Maintain file metadata                     | class B      |
-| SU0404-03     | Manage file permissions                    | class B      |
+| SOFTWARE Unit | Description                                                    | Hazard Class |
+| ------------- | :------------------------------------------------------------- | :----------- |
+| SU0404-01     | Implements encrypted file operations with integrity validation | class B      |
+| SU0404-02     | Maintains comprehensive file metadata with version control     | class B      |
+| SU0404-03     | Enforces granular file access permissions with audit logging   | class B      |
 
 ### 6.13 SOFTWARE ITEM SI04-05
-This Software item manages settings management backend for storing and retrieving application preferences.
+This Software item provides robust settings management with secure storage and retrieval.
 
-| SOFTWARE Unit | Description                                           | Hazard Class |
-| ------------- | :---------------------------------------------------- | :----------- |
-| SU0405-01     | Backend to store and retrieve application preferences | class B      |
-| SU0405-02     | Load settings defaults                                | class B      |
-| SU0405-03     | Save and update user preferences                      | class B      |
+| SOFTWARE Unit | Description                                                         | Hazard Class |
+| ------------- | :------------------------------------------------------------------ | :----------- |
+| SU0405-01     | Maintains secure storage of application preferences with encryption | class B      |
+| SU0405-02     | Provides system defaults with fallback capability                   | class B      |
+| SU0405-03     | Updates user preferences with atomic transaction guarantees         | class B      |
 
 ### 6.14 SOFTWARE ITEM SI04-06
-This Software item handles language management backend services including localization APIs.
+This Software item delivers comprehensive localization services with dynamic content updates.
 
-| SOFTWARE Unit | Description                            | Hazard Class |
-| ------------- | :------------------------------------- | :----------- |
-| SU0406-01     | Compute english locale API             | class B      |
-| SU0406-02     | Compute traditional chinese locale API | class B      |
-| SU0406-03     | Fetch and apply localization data      | class B      |
+| SOFTWARE Unit | Description                                                    | Hazard Class |
+| ------------- | :------------------------------------------------------------- | :----------- |
+| SU0406-01     | Serves English localization with complete language coverage    | class B      |
+| SU0406-02     | Serves Traditional Chinese localization with complete coverage | class B      |
+| SU0406-03     | Manages dynamic localization updates with caching optimization | class B      |
 
 ### 6.15 SOFTWARE ITEM SI05-01
-This Software item manages pub/sub and event management for data integration.
+This Software item provides reliable event management with guaranteed message delivery.
 
-| SOFTWARE Unit | Description                     | Hazard Class |
-| ------------- | :------------------------------ | :----------- |
-| SU0501-01     | Manage event subscriptions      | class B      |
-| SU0501-02     | Dispatch and log event messages | class B      |
-| SU0501-03     | Retry failed message deliveries | class B      |
+| SOFTWARE Unit | Description                                             | Hazard Class |
+| ------------- | :------------------------------------------------------ | :----------- |
+| SU0501-01     | Handles event subscriptions with durability guarantees  | class B      |
+| SU0501-02     | Processes events with complete audit trail maintenance  | class B      |
+| SU0501-03     | Ensures message delivery with automated retry mechanism | class B      |
 
 ### 6.16 SOFTWARE ITEM SI06-01
-This Software item handles pre-processing data pipeline including filtering and normalization.
+This Software item executes data pre-processing with precise filtering and normalization.
 
-| SOFTWARE Unit | Description   | Hazard Class |
-| ------------- | :------------ | :----------- |
-| SU0601-01     | Filtering     | class B      |
-| SU0601-02     | Normalization | class B      |
+| SOFTWARE Unit | Description                                             | Hazard Class |
+| ------------- | :------------------------------------------------------ | :----------- |
+| SU0601-01     | Performs data filtering with configurable parameters    | class B      |
+| SU0601-02     | Executes data normalization with statistical validation | class B      |
 
 ### 6.17 SOFTWARE ITEM SI07-01
-This Software item manages ML model inference for dental segmentation tasks.
+This Software item performs dental segmentation with high-precision machine learning models.
 
-| SOFTWARE Unit | Description               | Hazard Class |
-| ------------- | :------------------------ | :----------- |
-| SU0701-01     | Dental segmentation tasks | class A      |
+| SOFTWARE Unit | Description                                              | Hazard Class |
+| ------------- | :------------------------------------------------------- | :----------- |
+| SU0701-01     | Executes dental segmentation with 95% accuracy threshold | class A      |
 
 ### 6.18 SOFTWARE ITEM SI08-01
-This Software item handles post-processing data pipeline including contour extraction and anatomy structure processing.
+This Software item performs advanced post-processing with detailed anatomical analysis.
 
-| SOFTWARE Unit | Description                   | Hazard Class |
-| ------------- | :---------------------------- | :----------- |
-| SU0801-01     | Contour extraction            | class A      |
-| SU0801-02     | Anatomy structure locating    | class A      |
-| SU0801-03     | Anatomy structure enhancement | class A      |
+| SOFTWARE Unit | Description                                                 | Hazard Class |
+| ------------- | :---------------------------------------------------------- | :----------- |
+| SU0801-01     | Performs contour extraction with sub-millimeter precision   | class A      |
+| SU0801-02     | Executes anatomical structure detection with 98% accuracy   | class A      |
+| SU0801-03     | Implements structure enhancement with contrast optimization | class A      |
 
 ### 6.19 SOFTWARE ITEM SI09-01
-This Software item manages storage for unstructured data with metadata and versioning capabilities.
+This Software item provides comprehensive unstructured data management with version control.
 
-| SOFTWARE Unit | Description                             | Hazard Class |
-| ------------- | :-------------------------------------- | :----------- |
-| SU0901-01     | Store data with metadata and versioning | class B      |
+| SOFTWARE Unit | Description                                                       | Hazard Class |
+| ------------- | :---------------------------------------------------------------- | :----------- |
+| SU0901-01     | Maintains data storage with complete version history and metadata | class B      |
 
 ### 6.20 SOFTWARE ITEM SI10-01
-This Software item handles storage for structured data including indexing and backup functionality.
+This Software item manages structured data with reliable indexing and backup capabilities.
 
-| SOFTWARE Unit | Description                      | Hazard Class |
-| ------------- | :------------------------------- | :----------- |
-| SU1001-02     | Indexing                         | class B      |
-| SU1001-03     | Backup and restore functionality | class B      |
-## 7. UPDATE AND VERIFICATION OF SOFTWARE DETAIL DESIGN
-Before this document is released, all software unit shall be reviewed to ensure the following:
+| SOFTWARE Unit | Description                                                   | Hazard Class |
+| ------------- | :------------------------------------------------------------ | :----------- |
+| SU1001-02     | Maintains optimized indexing with full-text search capability | class B      |
+| SU1001-03     | Executes automated backups with integrity verification        | class B      |
+
+## 7. UPDATE AND VERIFICATION OF SOFTWARE DETAIL DESIGNBefore this document is released, all software unit shall be reviewed to ensure the following:
 
 | Item                                                   | Pass/Fail | Check by |
 | :----------------------------------------------------- | :-------- | :------- |
