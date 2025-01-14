@@ -1,4 +1,4 @@
-System requirement ID,Description,Software requirement ID,Description,Software Item ID,Description,Software Unit ID,Description,Unit test ID,Item Test ID,System test ID, Safety Class,Hazard ID
+System Requirement ID,MR Description,Software requirement ID,SR Description,Software Item ID,SI Description,Software Unit ID,SU Description,Unit Test ID,Item Test ID,System test ID, Safety Class,Hazard ID
 MR01,Annotation,SR01, The software shall manage the frontend UI for Imaging features,SI01-01,display dental with periodontal stage,SU0101-01,Render the length of periodontal estimation.,SUT0101-01,SIT01-01,SRT01,A,HZ 1.1.1
 ,,,,,,SU0101-02,Auto-annotation(Render periodontal stage visualization),SUT0101-02,,,,
 ,,,,,,SU0101-03,"view, zoom, and navigate through imaging layers",SUT0101-03,,,,
@@ -13,14 +13,17 @@ MR03,Management,SR03,The software shall manage the frontend for foundational fea
 ,,,,,,SU0303-02,An UI allows users to filter,SUT0303-02,,,,
 ,,,,,,SU0303-03,User could export log entries for system actions and access history.,SUT0303-03,,,,
 ,,,,SI03-04,file management UI,SU0304-01,An archive button,SUT0304-01,SIT03-04,,B,HZ 3.4.1
-,,,,,,SU0304-02, Display and manage file list,SUT0304-02,,,,
+,,,,,,SU0304-02,Display and manage file list,SUT0304-02,,,,
 ,,,,,,SU0304-03,Handle file upload/download,SUT0304-03,,,,
+,,,,,,SU0304-04,An Erasure Button,SUT0304-04,,,,
 ,,,,SI03-05,setting management UI,SU0305-01,Render a settings management interface that allows configuration of application preferences,SUT0305-01,SIT03-05,,B,HZ 3.5.1
 ,,,,,,SU0305-02,Display settings options,SUT0305-02,,,,
 ,,,,,,SU0305-03,auto-save settings changes,SUT0305-03,,,,
 ,,,,SI03-06,language management UI,SU0306-01,present english locale UI,SUT0306-01,SIT03-06,,B,HZ 3.6.1
 ,,,,,,SU0306-02,present traditional chineese locale UI,SUT0303-02,,,A,HZ 3.3.2
 ,,,,,,SU0306-03,Switch between language locales,SUT0303-03,,,,
+,,,,SI03-07,Patient Report Management UI,SU0107-01,view patient report in UI,SUT0307-01,SIT03-07,,B,HZ 3.7.1
+,,,,,,SU0107-02,edit patient report in UI,SUT0307-02,,,,
 ,,,,SI04-01,account management backend,SU0401-01,"backend services for managing user accounts, including user creation, deletion, permissions setting, and profile updates.",SUT0401-01,SIT04-01,SRT04,B,HZ 4.1.1
 ,,,,,,SU0401-02,Process user registration and login,SUT0401-02,,,,
 ,,,,,,SU0401-03,Handle account deletion and updates,SUT0401-03,,,,
@@ -38,6 +41,8 @@ MR03,Management,SR03,The software shall manage the frontend for foundational fea
 ,,,,SI04-06,language management backend,SU0406-01,compute english locale API,SUT0406-01,SIT04-06,,B,HZ 4.6.1
 ,,,,,,SU0406-02,compute traditional chineese locale API,SUT0406-02,,,,
 ,,,,,,SU0406-03,Fetch and apply localization data,SUT0406-03,,,,
+,,,,SI04-07,Patient Report Management backend,SU0407-01,Generate patient report data from backend,SUT0407-01,SIT04-07,,B,HZ 4.7.1
+,,,,,,SU0407-02,Save patient report in .doc format,SUT0407-02,,,,
 MR05,Messaging Queue,SR05, The software shall manage all events and messagings for data integration,SI05-01,pub/sub and event management,SU0501-01,Manage event subscriptions,SUT0501-01,SIT05-01,SRT05,B,HZ 5.1.1
 ,,,,,,SU0501-02, Dispatch and log event messages,SUT0501-02,,,,
 ,,,,,,SU0501-03,Retry failed message deliveries,SUT0501-03,,,,
